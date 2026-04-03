@@ -16,7 +16,7 @@ size = Vector3(100, 0.1, 50)
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 5, 0)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1539629054]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.8660254, 0.49999997, 0, -0.5, 0.8660253, 0, 3, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 5.353615)
 far = 2000.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=35773154]
