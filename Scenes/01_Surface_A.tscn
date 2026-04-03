@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dcbtrya2bx4vo"]
+
+[ext_resource type="PackedScene" uid="uid://cyhnjea4tbtd5" path="res://Characters/Player/Player.tscn" id="1_3k5cv"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_o68mt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o68mt"]
+size = Vector3(100, 0.1, 50)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3k5cv"]
+size = Vector3(100, 0.1, 50)
+
+[node name="Node3D" type="Node3D" unique_id=172608215]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1464134888]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1539629054]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.8660254, 0.49999997, 0, -0.5, 0.8660253, 0, 3, 3)
+far = 2000.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=35773154]
+physics_material_override = SubResource("PhysicsMaterial_o68mt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1571305797]
+shape = SubResource("BoxShape3D_o68mt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=420451815]
+mesh = SubResource("BoxMesh_3k5cv")
+
+[node name="Player" parent="." unique_id=1135844691 instance=ExtResource("1_3k5cv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0859029, 0)
